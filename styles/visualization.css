@@ -1,8 +1,8 @@
+
 *{
   margin: 0;
   padding: 0;
 }
-
 html {
   height: 100%;
   width: 100%;
@@ -93,6 +93,7 @@ body {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
+
 }
 
 /* Responsive Styles */
@@ -193,11 +194,13 @@ body {
 
 .wrapper-menu-visualization .menu-card-active {
   background-color: #2196F3;
+
   color: white;
 }
 
 .wrapper-menu-visualization .menu-card:hover {
   background-color: #2196F3;
+
   color: white;
 }
 
@@ -272,7 +275,6 @@ body {
 }
 
 
-
 .wrapper-visualization {
   display: flex;
   flex-wrap: wrap;
@@ -314,7 +316,6 @@ body {
 /* .card img {
   max-width: 100%;
 } */
-
 
 .footer {
   padding: 20px;
