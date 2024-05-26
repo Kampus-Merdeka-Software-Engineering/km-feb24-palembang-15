@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -10,41 +15,43 @@ body {
   padding: 0;
 }
 
-.container {
-  width: 100%;
-}
-table {
-  font-size: 10px;
-}
-
 .nav {
-  background-color: #2196F3;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  background-color: #001164;
+  padding: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto;
+  padding-left: 10;
+  box-sizing: border-box;
+}
+
+.nav .logo img {
+  margin-right: 0px; 
+  width: 50px; 
+  height: auto; 
 }
 
 .nav .logo {
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen anak secara horizontal */
+  align-items: center;
   color: white;
   padding: 10px;
+  /* background-color: brown; */
+  margin-left: 0;
+  justify-content: left;
   margin-left: 0;
 }
 
+
 .nav .topnav {
   display: flex;
-  padding: 10px;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
+  /* background-color: chartreuse; */
 }
 
 .nav .menu {
-  padding: 10px 20px;
-  background-color: white;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -52,25 +59,20 @@ table {
   width: 100px;
 }
 
+
 .nav .menu-active {
-  padding: 10px 20px;
-  background-color: #ccc;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
+  color: rgb(255, 255, 255);
 }
 
 .nav .menu:hover {
-  background-color: #ccc;
-  color: black;
+  /* background-color: #ccc;
+  color: black; */
   transition: background-color 0.3s;
+  transform: scale(1.25);
 }
 
 .nav .menu-active {
-  background-color: #ccc;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .nav .menu a,
@@ -79,7 +81,7 @@ table {
   height: 100%;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 /* Responsive Styles */
@@ -122,13 +124,16 @@ table {
   }
 }
 
+/* ---------------------------------- Bagian Main ------------------------------------- */
 .main {
-  background-color: white;
-  padding: 20px;
-  margin: 25px 40px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  text-align: center;
+  background-color:#ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 60px;
+  padding-left: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .main .main-content {
@@ -157,65 +162,52 @@ table {
 }
 
 
-.metadata {
-  background-color: white;
-  padding: 10px;
-  margin: 25px 40px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  text-align: center;
+.table-container {
+  overflow-x: auto; 
+  max-width: 100%; /
+  margin: 20px 0; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.metadata .metadata-title {
-  padding: 10px;
-  text-align: left;
-}
-
-.metadata-card {
-  display: flex;
+/* Gaya untuk tabel */
+table {
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 10px;
+  border-collapse: collapse; /
 }
 
-.no-metadata {
-  background-color: #18067a;
-  color: white;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  border-radius: 8px;
+/* Gaya untuk header tabel */
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 12px; 
+  text-align: left;
+  min-width: 100px; 
 }
 
-.name-metadata {
-  background-color: #d0d1eb;
-  color: black;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-grow: 1;
-  border-radius: 5px;
+/* Gaya untuk sel dalam tabel */
+td {
+  padding: 12px; 
+  border-bottom: 1px solid #ddd;
+  min-width: 100px; 
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .metadata {
-    margin: 25px 20px;
-  }
+/* Gaya untuk baris ganjil */
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
 }
 
-@media (max-width: 480px) {
-  .metadata {
-    margin: 25px 10px;
-    padding: 15px;
-  }
+/* Gaya untuk baris saat dihover */
+tbody tr:hover {
+  background-color: #f0f0f0;
 }
 
 
+
+/* ---------------------------------- Bagian Footer ------------------------------------- */
 
 .footer {
   padding: 20px;
