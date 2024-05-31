@@ -1,42 +1,58 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  background-color: #e9e9e9;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* Mengatur dasar pada body dan html */
+html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
+/* Pastikan konten utama memenuhi ruang yang tersedia */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gaya untuk navbar */
 .nav {
-  background-color: #2196F3;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  background-color: #001164;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav .logo {
+  display: flex;
+  align-items: center;
   color: white;
   padding: 10px;
 }
 
+.nav .logo img {
+  margin-right: 50px;
+  width: 50px;
+  height: auto;
+}
+
 .nav .topnav {
+  color: white;
   display: flex;
-  padding: 10px;
+  padding: 5px;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 5px;
 }
 
 .nav .menu {
-  padding: 10px 20px;
-  background-color: white;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -45,8 +61,7 @@ body {
 }
 
 .nav .menu-active {
-  padding: 10px 20px;
-  background-color: #ccc;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -55,14 +70,12 @@ body {
 }
 
 .nav .menu:hover {
-  background-color: #ccc;
-  color: black;
   transition: background-color 0.3s;
+  transform: scale(1.25);
 }
 
 .nav .menu-active {
-  background-color: #ccc;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .nav .menu a,
@@ -71,152 +84,168 @@ body {
   height: 100%;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
 
   .nav .topnav {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
 }
 
 @media (max-width: 768px) {
   .nav .topnav {
-    flex-direction: column;
-    gap: 5px;
+      flex-direction: column;
+      gap: 5px;
   }
 
   .nav .menu,
   .nav .menu-active {
-    width: auto;
-    margin: 10px 0;
+      width: auto;
+      margin: 10px 0;
   }
 }
 
 @media (max-width: 480px) {
   .nav .topnav {
-    flex-direction: column;
-    gap: 5px;
+      flex-direction: column;
+      gap: 5px;
   }
 
   .nav .menu,
   .nav .menu-active {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
   }
 }
 
-.main-about {
-  border-radius: 8px;
-  border: 1px solid #ccc;
+/* ---------------------------------- Bagian Main ------------------------------------- */
+
+/* Gaya untuk container tim */
+.team-container1,
+.team-container2 {
+  background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  padding: 10px;
-  margin: 25px 40px;
-  background-color: white;
-  gap: 30px;
-}
-
-.about-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: calc(33.333% - 30px);
-  width: 250px;
-  /* Adjust width to ensure three cards fit per row with space between */
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
   box-sizing: border-box;
 }
 
-.about-card img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
-  border-radius: 50%;
+/* Gaya untuk kartu tim */
+.team-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: calc(25% - 60px);
+  transition: transform 0.2s ease, box-shadow 0.5s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
 }
 
-.about-card .about-position,
-.about-card .about-name {
-  margin: 5px 0;
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  border-radius: 10px;
 }
 
-/* Responsive Styles */
+.team-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+.team-card h3 {
+  margin: 15px 0 5px;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.team-card p {
+  margin: 0 0 15px;
+  font-size: 16px;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.team-card:hover h3, .team-card:hover p {
+  color: #000;
+}
+
+/* Media queries untuk tampilan responsif */
 @media (max-width: 768px) {
-  .main-about {
-    margin: 15px;
-    /* Adjust margin for smaller screens */
-  }
-
-  .about-card {
-    width: calc(50% - 15px);
-    /* Adjust width for two cards per row with space between */
+  .team-card {
+      width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
-  .main-about {
-    margin: 10px;
-    /* Adjust margin for even smaller screens */
-  }
-
-  .about-card {
-    width: calc(100% - 20px);
-    /* Adjust width for one card per row */
+  .team-card {
+      width: 100%;
   }
 }
 
-
-.about-us {
-  background-color: white;
-  padding: 10px;
-  margin: 25px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.about-us .about-us-content {
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.main .main-content p {
-  text-align: justify;
-}
-
+/* Gaya untuk footer */
 .footer {
+  width: 100%;
   padding: 20px;
-  /* Tambahkan sedikit padding agar konten tidak terlalu berdekatan dengan tepi */
   background-color: black;
   color: white;
   text-align: center;
-  /* Tengahkan teks */
+  box-sizing: border-box;
+  margin-top: auto; /* Pastikan footer berada di dasar halaman */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footer {
-    padding: 15px;
-    /* Kurangi padding saat layar menjadi lebih kecil */
+      padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 10px;
-    /* Kurangi padding lebih lanjut untuk layar yang lebih kecil */
+      padding: 10px;
   }
 }

@@ -5,28 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Visualization</title>
-    <link href="../styles/visualization.css"  rel="stylesheet" type="text/css" />
-    <script src="../script/visualization.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js">
-    </script>
+    <link href="/styles/visualization_segment_style/segment.css" rel="stylesheet" type="text/css" />
+    <script src="/script/visualization_segment_script/segment.js"></script>
 </head>
-
-
-
 
 <header>
     <nav>
         <div class="nav">
             <div class="logo">
-                <h2>Superstore Analytics</h2>
-                <img src="../image/logo.png" alt="Logo" width="50" height="50"> 
+                 <h2>Superstore Analytics</h2>
+                <img src="../../image/logo.png" alt="Logo" width="50" height="50"> 
             </div>
 
             <div class="topnav">
                 <section>
                     <div class="menu">
-                        <a href="../index.html">Home</a>
+                        <a href="/index.html">Home</a>
                     </div>
                 </section>
 
@@ -44,7 +38,7 @@
 
                 <section>
                     <div class="menu">
-                        <a href="../menu/about.html">About</a>
+                        <a href="/menu/about.html">About</a>
                     </div>
                 </section>
             </div>
@@ -52,29 +46,28 @@
     </nav>
 </header>
 
-
 <body>
     <main>
         <section class="wrapper-menu-visualization">
-            <a href="#overview" style="display: block; text-decoration: none;">
-                <div class="menu-card-active">
+            <a href="/menu/visualization.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
                     <h2 class="menu-title">Overview</h2>
                 </div>
             </a>
 
-            <a href="../menu/visualization_segment_menu/segment.html" style="display: block; text-decoration: none;">
-                <div class="menu-card">
+            <a href="#segment" style="display: block; text-decoration: none;">
+                <div class="menu-card-active">
                     <h2 class="menu-title">Segment</h2>
                 </div>
             </a>
 
-            <a href="../menu/visualization_region_menu/region.html" style="display: block; text-decoration: none;">
+            <a href="/menu/visualization_region_menu/region.html" style="display: block; text-decoration: none;">
                 <div class="menu-card">
                     <h2 class="menu-title">Region</h2>
                 </div>
             </a>
 
-            <a href="../menu/visualization_product_menu/product.html" style="display: block; text-decoration: none;">
+            <a href="/menu/visualization_product_menu/product.html" style="display: block; text-decoration: none;">
                 <div class="menu-card">
                     <h2 class="menu-title">Product</h2>
                 </div>
@@ -88,45 +81,40 @@
             </div>
 
             <div class="card">
-                <h2 class="title-visualization">Sales by Category</h2>
-                <canvas id="salesByCategory"></canvas>
+                <h2 class="title-visualization">Profit by Segment</h2>
+                    <canvas id="profitBySegment"></canvas>
             </div>
         </section>
 
         <section class="wrapper-visualization">
             <div class="card">
-                <h2 class="title-visualization">AVG Day Service by Shipping</h2>
-                <canvas id="AVGDayServiceByShipping""></canvas>
+                <h2 class="title-visualization">Sales per Quantity by Segment</h2>
+                    <canvas id="salesPerQuantityBySegment"></canvas>
             </div>
 
             <div class="card">
-                <h2 class="title-visualization">Sales by Sub-Category</h2>
-                    <canvas id="salesBySubCategory"></canvas>
+                <h2 class="title-visualization">Profit per Quantity by Segment</h2>
+                    <canvas id="ProfitPerQuantityBySegment"></canvas>
             </div>
         </section>
 
         <section class="wrapper-visualization">
             <div class="card">
-                <h2 class="title-visualization">Sales by Region</h2>
-                    <canvas id="salesByRegion"></canvas>
+                <h2 class="title-visualization">Sales by Segment Year of Year</h2>
+                    <canvas id="salesBySegmentYoY"></canvas>
             </div>
 
             <div class="card">
-                <h2 class="title-visualization">Sales by Region Year of Year</h2>
-                    <canvas id="salesByRegionYoY"></canvas>
+                <h2 class="title-visualization">Ship Mode per Segment</h2>
+                    <canvas id="shipModePerSegment"></canvas>
             </div>
         </section>
 
-            <section class="wrapper-visualization">
-                <div class="card">
-                    <h2 class="title-visualization">Customer Ship Mode</h2>
-                        <canvas id="customerShipMode"></canvas>
-                </div>
-    
-                <div class="card">
-                    <h2 class="title-visualization">Sales and Profit by Ship Mode</h2>
-                        <canvas id="salesAndProfitByShipMode"></canvas>
-                </div>
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">Region per Segment</h2>
+                    <canvas id="regionPerSegment"></canvas>
+            </div>
         </section>
     </main>
 

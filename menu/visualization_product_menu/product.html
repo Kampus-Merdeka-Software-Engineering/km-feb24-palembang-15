@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Visualization</title>
+    <link href="/styles/visualization_product_style/product.css" rel="stylesheet" type="text/css" />
+    <script src="/script/visualization_product_script/product.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <style>
+        /* Tambahkan CSS ini untuk mengatur ukuran canvas dan mencegah reflow */
+        #chartContainer {
+            width: 100%;
+            height: 400px; /* Atur tinggi sesuai kebutuhan */
+            position: relative;
+        }
+        #numberOfProductByShipMode {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<header>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <h2>Superstore Analytics</h2>
+                <img src="../../image/logo.png" alt="Logo" width="50" height="50"> 
+            </div>
+
+            <div class="topnav">
+                <section>
+                    <div class="menu">
+                        <a href="/index.html">Home</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu">
+                        <a href="/menu/dataset.html">Dataset</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu-active">
+                        <a href="#visualization">Visualization</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu">
+                        <a href="/menu/about.html">About</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section class="wrapper-menu-visualization">
+            <a href="/menu/visualization.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Overview</h2>
+                </div>
+            </a>
+
+            <a href="/menu/visualization_segment_menu/segment.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Segment</h2>
+                </div>
+            </a>
+
+            <a href="/menu/visualization_region_menu/region.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Region</h2>
+                </div>
+            </a>
+
+            <a href="#product" style="display: block; text-decoration: none;">
+                <div class="menu-card-active">
+                    <h2 class="menu-title">Product</h2>
+                </div>
+            </a>
+        </section>
+
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">Number of Product by Year</h2>
+                    <canvas id="numberOfProductByYear"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">sales Of Product By Year</h2>
+                    <canvas id="salesOfProductByYear"></canvas>
+            </div>
+        </section>
+
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">profit Of Product By Year</h2>
+                    <canvas id="profitOfProductByYear"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">number Of Product By Category</h2>
+                    <canvas id="numberOfProductByCategory"></canvas>
+            </div>
+        </section>
+
+        
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">profit Sales By SubCategory</h2>
+                    <canvas id="profitSalesBySubCategory"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">quantity By SubCategory</h2>
+                    <canvas id="quantityBySubCategory"></canvas>
+            </div>
+        </section>
+
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">number Of Product By ShipMode</h2>
+                    <canvas id="numberOfProductByShipMode" width="400" height="400"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">top 5  Products Purchased</h2>
+                    <canvas id="top5ProductsPurchased"></canvas>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Super Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

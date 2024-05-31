@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -11,32 +16,48 @@ body {
 }
 
 .nav {
-  background-color: #2196F3;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  background-color: #001164;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto;
 }
 
 .nav .logo {
+  display: flex; 
+  align-items: center; 
   color: white;
   padding: 10px;
 }
+.nav .logo img {
+  margin-right: 50px; 
+  width: 50px; 
+  height: auto; 
+}
+
+.nav .logo {
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen anak secara horizontal */
+  align-items: center; /* Menyelaraskan elemen anak secara vertikal di tengah */
+  color: white;
+  padding: 10px;
+}
+.nav .logo img {
+  margin-right: 50px; /* Menambahkan ruang antara gambar dan teks */
+  width: 50px; /* Tentukan lebar gambar sesuai kebutuhan */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+}
 
 .nav .topnav {
+  color: white;
   display: flex;
-  padding: 10px;
+  padding: 5px;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 5px;
 }
 
 .nav .menu {
-  padding: 10px 20px;
-  background-color: white;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -44,9 +65,9 @@ body {
   width: 100px;
 }
 
+
 .nav .menu-active {
-  padding: 10px 20px;
-  background-color: #ccc;
+  padding: 10px ;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -55,14 +76,14 @@ body {
 }
 
 .nav .menu:hover {
-  background-color: #ccc;
-  color: black;
+  /* background-color: #ccc;
+  color: black; */
   transition: background-color 0.3s;
+  transform: scale(1.25);
 }
 
 .nav .menu-active {
-  background-color: #ccc;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .nav .menu a,
@@ -71,7 +92,7 @@ body {
   height: 100%;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 /* Responsive Styles */
@@ -86,6 +107,35 @@ body {
     align-items: flex-start;
   }
 }
+
+@media (max-width: 768px) {
+  .nav .topnav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav .menu,
+  .nav .menu-active {
+    width: auto;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav .topnav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav .menu,
+  .nav .menu-active {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+  }
+}
+
+/* ---------------------------------- Bagian Main ------------------------------------- */
 
 @media (max-width: 768px) {
   .nav .topnav {

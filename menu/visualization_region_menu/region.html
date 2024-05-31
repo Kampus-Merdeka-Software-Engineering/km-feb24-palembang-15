@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Visualization</title>
+    <link href="/styles/visualization_region_style/region.css" rel="stylesheet" type="text/css" />
+    <script src="/script/visualization_region_script/region.js"></script>
+</head>
+
+<header>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <h2>Superstore Analytics</h2>
+                <img src="../../image/logo.png" alt="Logo" width="50" height="50"> 
+            </div>
+
+            <div class="topnav">
+                <section>
+                    <div class="menu">
+                        <a href="/index.html">Home</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu">
+                        <a href="/menu/dataset.html">Dataset</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu-active">
+                        <a href="#visualization">Visualization</a>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="menu">
+                        <a href="/menu/about.html">About</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section class="wrapper-menu-visualization">
+            <a href="/menu/visualization.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Overview</h2>
+                </div>
+            </a>
+
+            <a href="/menu/visualization_segment_menu/segment.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Segment</h2>
+                </div>
+            </a>
+
+            <a href="#region" style="display: block; text-decoration: none;">
+                <div class="menu-card-active">
+                    <h2 class="menu-title">Region</h2>
+                </div>
+            </a>
+
+            <a href="/menu/visualization_product_menu/product.html" style="display: block; text-decoration: none;">
+                <div class="menu-card">
+                    <h2 class="menu-title">Product</h2>
+                </div>
+            </a>
+        </section>
+
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">Region</h2>
+                    <canvas id="region"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">Sales by Category</h2>
+                    <canvas id="salesByCategory"></canvas>
+            </div>
+        </section>
+
+        <section class="wrapper-visualization">
+            <div class="card">
+                <h2 class="title-visualization">Ship Mode</h2>
+                    <canvas id="shipMode"></canvas>
+            </div>
+
+            <div class="card">
+                <h2 class="title-visualization">Sales Year of Year</h2>
+                    <canvas id="salesYoY"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Super Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
